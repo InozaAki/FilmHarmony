@@ -83,8 +83,6 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
 Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -186,22 +184,16 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+[MerlinNocte](https://github.com/MerlinNocte)
 
-Project Link: [https://github.com/github_username/repo_name](https://github.com/InozaAki/FilmHarmony/)
+[InozaAki](https://github.com/InozaAki)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+[Fabián J. Escalante Fernández](https://github.com/Fabian-J-Escalante)
 
-
-
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
-* []()
-* []()
-* []()
+Project Link: [FilmHarmonyRecommendations](https://github.com/InozaAki/FilmHarmony/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 
 
