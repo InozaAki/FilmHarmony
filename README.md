@@ -88,13 +88,13 @@ Ensure a stable internet connection as the system relies on TMDb API for movie d
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Screenshot
-![WhatsApp Image 2023-11-26 at 11 05 54 PM](https://github.com/InozaAki/FilmHarmony/assets/106487460/18ae80cd-6258-41a5-9de8-cb131bc7e782)
+![DEMO](https://github.com/InozaAki/FilmHarmony/assets/106487460/55153f53-7bcb-4b0f-8932-d997c5b70684)
 
 
 <!-- ROADMAP -->
 ## Roadmap
 
-- [✔] Linked List
+- [✔] Hash Table
 - [✔] API Interaction
 - [✔] Recommendation Generation
     - [✔] Quicksort Algorithm
