@@ -18,8 +18,7 @@ struct Movie {
     std::vector<std::string> cast;       // Lista de miembros del elenco
     std::string director;                // Nombre del director
     std::vector<std::string> keywords;   // Palabras clave asociadas con la película
-
-   double ranking;
+    int ranking;
 
 };
 
@@ -43,7 +42,7 @@ Movie fetchMovieDetails(int movie_id) {
 
     Movie movie;
     movie.title = basicData["title"].get<std::string>();
-    movie.ranking = basicData["vote_average"].get<double>();
+    movie.ranking = basicData["vote_average"].get<int>();
     for (const auto& genre : basicData["genres"]) {
         movie.genres.insert(genre["name"].get<std::string>());
     }
@@ -150,7 +149,7 @@ std::vector<Movie> fetchSimilarMovies(int movie_id) {
     } else {
         std::cerr << "Error al obtener películas similares." << std::endl;
     }
-    
+
     return similarMovies;
 }
 
@@ -290,4 +289,3 @@ int main() {
 
     return 0;
 }
-
