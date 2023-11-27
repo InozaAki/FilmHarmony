@@ -37,7 +37,7 @@
 <h3 align="center">FilmHarmonyRecommendations</h3>
 
   <p align="center">
-    FilmHarmonyRecommendations is an innovative program that helps you discover new movies based on your preferences and the movies you have already seen. It uses an intelligent algorithm to analyze your tastes and provide you with personalized recommendations. Whether you like romantic comedies, action thrillers or historical dramas, FilmHarmonyRecommendations will guide you to your next great movie. <br>**Get ready to explore the world of cinema like never before!** 🎬🍿</br>
+    FilmHarmonyRecommendations is an innovative program that helps you discover new movies based on your preferences and the movies you have already seen. It uses an intelligent algorithm to analyze your tastes and provide you with personalized recommendations. Whether you like romantic comedies, action thrillers or historical dramas, FilmHarmonyRecommendations will guide you to your next great movie.<br><strong>Get ready to explore the world of cinema like never before!</strong>🎬🍿</br>
     <br />
     <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
     <br />
