@@ -31,13 +31,13 @@
 <br />
 <div align="center">
   <a href="https://github.com/InozaAki/FilmHarmony/">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="https://icon-library.com/images/film-icon/film-icon-1.jpg" alt="Logo" width="100" height="100">
   </a>
 
-<h3 align="center">project_title</h3>
+<h3 align="center">FilmHarmonyRecommendations</h3>
 
   <p align="center">
-    project_description
+    FilmHarmonyRecommendations is an innovative program that helps you discover new movies based on your preferences and the movies you have already seen. It uses an intelligent algorithm to analyze your tastes and provide you with personalized recommendations. Whether you like romantic comedies, action thrillers or historical dramas, FilmHarmonyRecommendations will guide you to your next great movie. <br>**Get ready to explore the world of cinema like never before!** 🎬🍿</br>
     <br />
     <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
     <br />
