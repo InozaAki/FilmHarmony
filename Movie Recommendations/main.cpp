@@ -2,11 +2,14 @@
 #include <unordered_map>
 #include <vector>
 #include <string>
+#include <unordered_set>
+#include <algorithm>
 #include <set>
 #include "httplib.h"
 #include "json.hpp"
+#include <stdlib.h>
 
-const std::string tmdb_api_key = "";  // Reemplazar con tu clave de API
+const std::string tmdb_api_key = "05ef1d094082f4d4a01f5e71fb7ba0d8";  // Reemplazar con tu clave de API
 
 // Estructura para almacenar detalles de una película
 struct Movie {
@@ -15,7 +18,15 @@ struct Movie {
     std::vector<std::string> cast;       // Lista de miembros del elenco
     std::string director;                // Nombre del director
     std::vector<std::string> keywords;   // Palabras clave asociadas con la película
+
+   double ranking;
+
 };
+
+//Algoritmo de Ordenamiento
+int partition(std::vector<Movie>&, int, int);
+void quicksort(std::vector<Movie>&, int, int);
+void sortMovies(std::vector<Movie>&);
 
 // Función para obtener detalles de una película desde TMDb
 Movie fetchMovieDetails(int movie_id) {
@@ -32,6 +43,7 @@ Movie fetchMovieDetails(int movie_id) {
 
     Movie movie;
     movie.title = basicData["title"].get<std::string>();
+    movie.ranking = basicData["vote_average"].get<double>();
     for (const auto& genre : basicData["genres"]) {
         movie.genres.insert(genre["name"].get<std::string>());
     }
@@ -138,6 +150,7 @@ std::vector<Movie> fetchSimilarMovies(int movie_id) {
     } else {
         std::cerr << "Error al obtener películas similares." << std::endl;
     }
+    
     return similarMovies;
 }
 
@@ -219,6 +232,31 @@ std::vector<Movie> recommendMovies(const std::vector<Movie>& blendedMovies, cons
     return sortedMovies;
 }
 
+int partition(std::vector<Movie>& Movies, int low, int high) {
+    int pivote = Movies[high].ranking;
+    int i = low - 1;
+    for (int j = low; j <= high - 1; j++) {
+        if (Movies[j].ranking > pivote || Movies[j].ranking == pivote) {
+            i++;
+            std::swap(Movies[i], Movies[j]);
+        }
+    }
+    std::swap(Movies[i + 1], Movies[high]);
+    return (i + 1);
+}
+
+void quicksort(std::vector<Movie>& Movies, int low, int high){
+  if(low < high){
+    int par = partition(Movies, low, high);
+    quicksort(Movies, low, par-1);
+    quicksort(Movies, par+1, high);
+  }
+}
+void sortMovies(std::vector<Movie>& Movies){
+  quicksort(Movies, 0, Movies.size()-1);
+}
+
+
 int main() {
     std::vector<int> movieIds = {550, 872585}; // Lista de IDs de películas
 
@@ -231,11 +269,13 @@ int main() {
 
         // Obtener y mostrar recomendaciones
         std::vector<Movie> recommendations = fetchSimilarMovies(movieId);
+        sortMovies(recommendations);
         for (const auto& movie : recommendations) {
             std::cout << "Título: " << movie.title << "\nGéneros: ";
             for (const auto& genre : movie.genres) {
                 std::cout << genre << ", ";
             }
+            std::cout << "\nVote Rate: " << movie.ranking;
             std::cout << "\n\nElenco: ";
             for (const auto& castMember : movie.cast) {
                 std::cout << castMember << ", ";
